@@ -27,7 +27,7 @@
              <div class="container">
                 <div class="row">
                     <h2 class="home-title text-center">Welcome to Ecommerce</h2>
-                    <div class="login-wrapper" id="loginform">
+                    <div class="login-wrapper" id="loginForm">
                         <h4 class="text-center">Login</h4>
                         <div class="input-group">
                             <input
@@ -57,7 +57,7 @@
                             Dont Have an Account? Signup
                         </div>
                     </div>
-                    <div class="login-wrapper d-none" id="signupform">
+                    <div class="login-wrapper d-none" id="signupForm">
                         <h4 class="text-center">SignUp</h4>
                         <div class="input-group">
                             <input
@@ -76,6 +76,14 @@
                             /> 
                         </div>
                         <div class="input-group">
+                            <input 
+                            type="email" 
+                            class="form-control" 
+                            placeholder="Email" 
+                            id="signupEmail" 
+                            /> 
+                        </div>
+                        <div class="input-group">
                         <button 
                         id="signupBtn" 
                         class="login-btn form-control btn btn-primary"
@@ -86,11 +94,13 @@
                         <div class="signup-btn text-center text-info" id="showloginBtn">
                             Already have an Account? Login
                         </div>
+                        <div id="authErrMsg" class="auth-error-msg text-center text-danger"> </div>
+                        <div id="succErrMsg" class="uth-error-msg text-center text-success"></div>
                     </div>
              </div>
              </div>
 
             </div>
-            
+            <script src="src\js\login.js"></script>
         </body>
 </html>
