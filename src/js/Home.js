@@ -1,9 +1,9 @@
 // const BASE_URL = "https://ecommce-be.herokuapp.com/ecomm/api/v1"
 
-const categoryList = document.getElementById('categoryList')
+const categoryList = document.getElementById("categoryList");
 
-function loadCategories(){
-    fetch(BASE_URL + '/categories')
+function loadCategories() {
+    fetch(BASE_URL + "/categories")
     .then((response) => response.json())
     .then((data) => {
         renderCategories(data);
@@ -12,7 +12,7 @@ function loadCategories(){
 }
 
 function renderCategories(categories) {
-    console.log(categories)
+    console.log(categories);
 }
 
 loadCategories();
