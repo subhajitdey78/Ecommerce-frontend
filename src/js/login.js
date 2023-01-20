@@ -25,11 +25,11 @@ function showSignup() {
     signupForm.classList.remove("d-none");
     loginForm.classList.add("d-none");
     }
-    function showLogin() {
+function showLogin() {
         signupForm.classList.add("d-none");
         loginForm.classList.remove("d-none");
         }
-     function loginFn(){
+    function loginFn(){
         if(signupUsername.value == ""){
             updateAuthErrorMsg("Username should not be empty");
         }else if (signupPassword.value == ""){
@@ -39,13 +39,14 @@ function showSignup() {
                 username: loginUsername.value,
                 password: loginPassword.value
             };
-            fetch(BASE_URL + "/auth/signup",{
+            fetch(BASE_URL + "/auth/signin",{
               method: "POST",
               headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(data)
-            }).then((response)=> response.json())
+            }).
+            then((response)=> response.json())
             .then((data) => {
              if(data.accessToken){     
                   localStorage.setItem("username", data.username)
@@ -75,7 +76,8 @@ function signupFn(){
              "Content-Type": "application/json"
          },
          body: JSON.stringify(data),
-        }).then((response) => response.json())
+        })
+        .then((response) => response.json())
           .then((data) => {
       console.log(data.accessToken)
 
