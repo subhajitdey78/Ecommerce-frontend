@@ -29,6 +29,25 @@ function showLogin() {
         signupForm.classList.add("d-none");
         loginForm.classList.remove("d-none");
         }
+function createCart() {
+        const userId = localStorage.getItem('userId')
+        const token = localStorage.getItem('token')
+
+        const headers = {
+            "Content-Type": "application/json",
+            'Authorozation': `Bearrer ${token} `
+        }
+        fetch(BASE_URL + '/carts', {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify({userId})
+        })
+        .then((response) => response.json())
+        .then((data) =>{
+            localStorage.setItem('cartId', data.id)
+            window.location.href= "index.html";
+        });
+      }  
     function loginFn(){
         if(signupUsername.value == ""){
             updateAuthErrorMsg("Username should not be empty");
@@ -53,6 +72,7 @@ function showLogin() {
                   localStorage.setItem("userId", data.id)
                   localStorage.setItem("token",data.accessToken)
                   localStorage.setItem("email", data.email)
+                  createCart()
              }else{
                 updateAuthErrorMsg(data.msg)
              }
@@ -99,6 +119,10 @@ function updateSuccErrorMsg(msg){
 function getElement(id){
     return document.getElementById(id);
 } 
+
+if(localStorage.getItem('username')) {
+    window.location.href = "index.html"
+}
 //event listener
 showSignupBtn.addEventListener("click", showSignup)
 showloginBtn.addEventListener("click", showLogin)
