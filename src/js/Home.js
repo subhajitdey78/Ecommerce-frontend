@@ -13,6 +13,23 @@ function loadCategories() {
 
 function renderCategories(categories) {
     console.log(categories);
+    let categoryListHtml = 
+    '<div class="category-item rounded-3 d-flex justify-content-center align-items-center" >' + 
+    '<a class="text-decoration-none text-white" href="productList.html" > All products </a>'+
+     "</div>"
+
+    for (i = 0; i <categories.length; i++ ){
+        categoryListHtml +=     
+        '<div class="category-item rounded-3 d-flex justify-content-center align-items-center" >' +
+        '<a class ="text-decoration-none text-white href="productList.html?categoryId=" ' +
+            categories[i].id +
+            '">' +
+            categories[i].name +
+            "</a>" +
+            "</div>";
+        }
+
+   categoryList.innerHTML = categoryListHtml; 
 }
 
 loadCategories();

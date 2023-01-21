@@ -12,3 +12,13 @@
 .category-list{
     margin-top: 50px;
 }
+.category-list .category-title{
+    border: 1px solid black;
+    margin: 20px;
+    width: 150px;
+    background-color: black;
+}
+.category-list .category-title a{
+    font-size: 18px;
+    padding: 30px 20px;
+}
