@@ -19,6 +19,7 @@ function renderCategories(categories) {
      "</div>"
 
     for (i = 0; i <categories.length; i++ ){
+        console.log( categories[i].id)
         categoryListHtml +=     
         '<div class="category-item rounded-3 d-flex justify-content-center align-items-center" >' +
         '<a class ="text-decoration-none text-white href="productList.html?categoryId=" ' +

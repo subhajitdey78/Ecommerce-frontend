@@ -1,0 +1,24 @@
+.product-image{
+    width: 100%;
+}
+.product-list-title{
+    font-size:32px;
+    margin: 40px 0;
+}
+.product-list-sidebar{
+    flex: 1;
+    margin-right: 50px;
+    margin-bottom: 100px;
+}
+#categoryList{
+    margin-bottom: 20px;
+}
+.product-list-box{
+    flex: 4;
+}
+.product-item{
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
