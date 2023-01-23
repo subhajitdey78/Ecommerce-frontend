@@ -35,7 +35,7 @@ function searchProduct() {
 }
 
 function loadProducts() {
-    const data = {} 
+    const data = {}
     if(window.location.serach){
         data.id = window.location.serach.split('=')[1]
     }
