@@ -91,7 +91,7 @@ function  renderProducts(){
         "</div">
         + '<div class="product-name text-center">' 
         + products[i].name + 
-        '</div>'
+        '</div>' +
         + '<div class="product-price text-center">$#8377 ' + 
         products[i].cost + 
         "</div>"
